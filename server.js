@@ -1,0 +1,59 @@
+require('dotenv').config()
+const express = require("express");
+const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+const mysql = require("mysql2");
+const { v4: uuidv4 } = require("uuid");
+const path = require("path");
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+// Define the path to your static files (like HTML, CSS, and images)
+const publicPath = path.join(__dirname, "public");
+
+// Serve static files from the 'public' directory
+app.use(express.static(publicPath));
+
+let connection = mysql.createConnection({
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database:process.env.DATABASE,
+  connectionLimit:10
+});
+
+// Define a route to serve your index file
+app.get("/", (req, res) => {
+  res.sendFile(path.join(publicPath, "index.html"));
+});
+
+app.get("/pdf/:filename", (req, res) => {
+  const pdfFileName = req.params.filename;
+  const decodedFileName = decodeURIComponent(pdfFileName); // Decode the filename
+  const pdfFilePath = path.join(__dirname, "public", "pdfs", decodedFileName);
+  res.sendFile(pdfFilePath);
+});
+
+app.post("/contact", (req, res) => {
+  let { name, email, project, message } = req.body;
+  let id = uuidv4();
+  let q = `INSERT INTO contact (id, name, email, project,message) VALUES ('${id}','${name}','${email}','${project}','${message}') `;
+  try {
+    connection.query(q, (err, result) => {
+      if (err) throw err;
+      console.log("Sent message successfully");
+      res.redirect("/");
+    });
+  } catch (err) {
+    res.send("some error occurred");
+  }
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
