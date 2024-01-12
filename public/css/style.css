@@ -73,6 +73,12 @@ section {
     color: #1a1a1a
 }
 
+#element {
+    color: chocolate;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
 /* End Button CSS*/
 
 /* Start header Navbar Section CSS*/
@@ -396,7 +402,7 @@ header .navbar ul li a:hover {
     border-radius: 50%;
     object-fit: cover;
     background-size: cover;
-    box-shadow: 0 4px 8px 0 rgba(236, 7, 7, 0.2), 0 6px 20px 0 rgba(225, 11, 11, 0.19);
+    /* box-shadow: 0 4px 8px 0 rgba(236, 7, 7, 0.2), 0 6px 20px 0 rgba(225, 11, 11, 0.19); */
     transition: transform 0.3s ease-in-out;
 }
 

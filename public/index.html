@@ -62,10 +62,7 @@
     <section class="home" id="home">
       <h3>Hi, There !</h3>
       <h1><span>I'm Yash Raj</span></h1>
-      <div class="mycontainer">
-        <span class="text first-text">I am a &nbsp;&nbsp;</span>
-        <span class="text sec-text">&nbsp;&nbsp; Frontend Developer</span>
-      </div>
+      <span id="element"></span>
       <p>
         Hello!,I am a self-motivated Web Developer and a person slighty obsessed
         for code quality. I'm passionate and hardworking with penchant for
@@ -424,5 +421,13 @@
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
+    <!-- Setup and start animation! -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web developer", "React js developer", "java", "Frontend"],
+        typeSpeed: 50,
+      });
+    </script>
   </body>
 </html>

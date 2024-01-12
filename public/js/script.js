@@ -43,21 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const text = document.querySelector(".sec-text");
 
-const textLoad = () => {
-  setTimeout(() => {
-    text.textContent = " Frontend Developer";
-  }, 0);
-  setTimeout(() => {
-    text.textContent = " Backend Developer";
-  }, 4000);
-  setTimeout(() => {
-    text.textContent = " Addiction to code";
-  }, 8000);
-  setTimeout(() => {
-    text.textContent = " Fun to code";
-  }, 12000);
-};
 
-textLoad();
-setInterval(textLoad, 16000);
+
 
