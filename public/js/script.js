@@ -41,7 +41,27 @@ document.addEventListener("DOMContentLoaded", function () {
     ' <a href="#" class="copyright-link">Yash Raj</a>. All Rights Reserved';
 });
 
-const text = document.querySelector(".sec-text");
+
+function startCounterAnimation(targetId, endValue) {
+  let current = 0;
+  const target = document.getElementById(targetId);
+  const intervalId = setInterval(() => {
+    current++;
+    target.textContent = current + "+";
+    if (current === endValue) {
+      clearInterval(intervalId);
+    }
+  }, 100);
+}
+
+// Start counter animations when the page is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  startCounterAnimation("counter-up-1", 1);
+  startCounterAnimation("counter-up-2", 10);
+  startCounterAnimation("counter-up-3", 3);
+  startCounterAnimation("counter-up-4", 1);
+});
+
 
 
 
