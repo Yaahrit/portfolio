@@ -167,7 +167,10 @@ header .navbar ul li a:hover {
     display: flex;
     justify-content: center;
     flex-flow: column;
-    padding: 0 15rem;
+    padding: 4rem;
+    /* background: linear-gradient(to right, #3494e6, #ec6ead); Gradient background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    border-radius: 10px; /* Optional: Add a border-radius for a rounded look */
 }
 
 .home h3 {
@@ -180,54 +183,6 @@ header .navbar ul li a:hover {
     color: #fff;
 }
 
-.mycontainer {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.mycontainer .text {
-    position: relative;
-    color: #35df01;
-    font-size: 20px;
-    font-weight: 600;
-    display: inline-block;
-    /* Ensure the container only takes the width of the text */
-}
-
-.mycontainer .text.first-text {
-    color: #fff;
-}
-
-.text.sec-text:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    /* Initial position outside the container */
-    height: 100%;
-    width: 100%;
-    background-color: #010718;
-    border-left: 2px solid #35df01;
-    animation: animate 4s steps(12) infinite;
-    display: block;
-    /* Ensure the pseudo-element is a block-level element */
-}
-
-@keyframes animate {
-
-    /* 40%,
-    60% {
-        left: calc(100% + 4px);
-    } */
-
-    100% {
-        left: 0%;
-        /* Move it back to the initial position */
-    }
-}
-
-
 .home h1 span {
     color: var(--springGreen);
 }
@@ -238,19 +193,40 @@ header .navbar ul li a:hover {
     padding: 1rem 0;
 }
 
+.btn {
+    background-color: var(--springGreen);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.btn:hover {
+    background-color: #2ecc71; /* Change to a shade of green */
+}
+
 .heading {
     text-align: center;
-    margin: 0 6rem;
+    margin: 0 2rem;
     font-size: 4rem;
     padding: 1rem;
-    border-bottom: .1rem solid #fff4;
+    border-bottom: 0.1rem solid #fff4;
     color: #fff;
+    animation: fadeInDown 1.5s ease-in-out;
 }
 
-.heading span {
-    color: var(--springGreen);
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
 /* End Home Section CSS*/
 
 /*Start About Section CSS*/
