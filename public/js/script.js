@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ' <a href="#" class="copyright-link">Yash Raj</a>. All Rights Reserved';
 });
 
-
 function startCounterAnimation(targetId, endValue) {
   let current = 0;
   const target = document.getElementById(targetId);
@@ -61,8 +60,3 @@ document.addEventListener("DOMContentLoaded", () => {
   startCounterAnimation("counter-up-3", 3);
   startCounterAnimation("counter-up-4", 1);
 });
-
-
-
-
-

@@ -3,6 +3,12 @@
 
 :root {
     --springGreen: #fe424d;
+    --bg-0: #010718;
+    --color-0: #f5f5f5;
+    --bg-1: #121212;
+    --color-1: #a8a8a8;
+    --toggle-bg: #3498db; /* Toggle background color */
+    --toggle-ball: #ffffff; /* Toggle ball color */
 }
 
 * {
@@ -169,8 +175,10 @@ header .navbar ul li a:hover {
     flex-flow: column;
     padding: 4rem;
     /* background: linear-gradient(to right, #3494e6, #ec6ead); Gradient background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
-    border-radius: 10px; /* Optional: Add a border-radius for a rounded look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Box shadow */
+    border-radius: 10px;
+    /* Optional: Add a border-radius for a rounded look */
 }
 
 .home h3 {
@@ -200,11 +208,13 @@ header .navbar ul li a:hover {
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+    transition: background-color 0.3s ease;
+    /* Add transition for smooth hover effect */
 }
 
 .btn:hover {
-    background-color: #2ecc71; /* Change to a shade of green */
+    background-color: #2ecc71;
+    /* Change to a shade of green */
 }
 
 .heading {
@@ -222,11 +232,13 @@ header .navbar ul li a:hover {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 /* End Home Section CSS*/
 
 /*Start About Section CSS*/
@@ -364,7 +376,8 @@ header .navbar ul li a:hover {
 /* Style each skills item */
 .skills-item {
     /* width: calc(35.33% - 20px); */
-    flex: 1 1 calc(35.33% - 20px);;
+    flex: 1 1 calc(35.33% - 20px);
+    ;
     margin-bottom: 10px;
     padding: 10px;
     box-sizing: border-box;
@@ -548,7 +561,7 @@ header .navbar ul li a:hover {
     padding: 10px 12px;
 }
 
-.contactee-link:hover{
+.contactee-link:hover {
     color: #e28743;
 }
 
