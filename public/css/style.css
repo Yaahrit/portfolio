@@ -7,8 +7,10 @@
     --color-0: #f5f5f5;
     --bg-1: #121212;
     --color-1: #a8a8a8;
-    --toggle-bg: #3498db; /* Toggle background color */
-    --toggle-ball: #ffffff; /* Toggle ball color */
+    --toggle-bg: #3498db;
+    /* Toggle background color */
+    --toggle-ball: #ffffff;
+    /* Toggle ball color */
 }
 
 * {
@@ -245,13 +247,13 @@ header .navbar ul li a:hover {
 .about .row {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 1rem 0;
 }
 
 .about .row .info {
-    flex: 1 1 48rem;
+    flex: 1 1 40rem;
     padding: 2rem 1rem;
     padding-left: 6rem;
 }
@@ -375,9 +377,7 @@ header .navbar ul li a:hover {
 
 /* Style each skills item */
 .skills-item {
-    /* width: calc(35.33% - 20px); */
     flex: 1 1 calc(35.33% - 20px);
-    ;
     margin-bottom: 10px;
     padding: 10px;
     box-sizing: border-box;
@@ -429,6 +429,8 @@ header .navbar ul li a:hover {
 .portfolio .box-container .box:hover img {
     transform: scale(1.2);
 }
+
+
 
 /* End Portfolio Section CSS */
 
@@ -569,6 +571,73 @@ header .navbar ul li a:hover {
 .footer-link:hover {
     color: hsl(0, 94%, 49%);
 }
+
+
+/* Add this in your existing CSS file or create a new one */
+.visitor-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    /* Adjust the margin as needed */
+    font-size: 16px;
+    /* Adjust the font size as needed */
+    color: #333;
+    /* Adjust the color as needed */
+    transition: color 0.3s ease;
+    /* Add color transition effect */
+}
+
+.visitor-count i {
+    margin-right: 8px;
+    /* Adjust the margin as needed */
+    font-size: 24px;
+    /* Adjust the icon size as needed */
+    color: #0366d6;
+    /* GitHub icon color */
+}
+
+#visitor-count-number {
+    margin-left: 5px;
+    /* Adjust the margin as needed */
+    font-weight: bold;
+}
+
+/* Add a pulse animation on hover for a dynamic effect */
+.visitor-count:hover {
+    color: #0366d6;
+    /* Change color on hover */
+    transition: color 0.3s ease;
+    /* Add color transition effect */
+    cursor: pointer;
+    /* Change cursor on hover */
+}
+
+/* Add a bounce animation for the GitHub icon */
+.visitor-count i {
+    animation: bounce 0.8s infinite;
+    /* Add bounce animation */
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
 
 
 /* Scroll For Top CSS */

@@ -44,13 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
 function startCounterAnimation(targetId, endValue) {
   let current = 0;
   const target = document.getElementById(targetId);
-  const intervalId = setInterval(() => {
-    current++;
-    target.textContent = current + "+";
-    if (current === endValue) {
-      clearInterval(intervalId);
-    }
-  }, 100);
+  if (target) { // Check if the target element exists
+    const intervalId = setInterval(() => {
+      current++;
+      target.textContent = current + "+";
+      if (current === endValue) {
+        clearInterval(intervalId);
+      }
+    }, 100);
+  }
 }
 
 // Start counter animations when the page is loaded
@@ -60,3 +62,26 @@ document.addEventListener("DOMContentLoaded", () => {
   startCounterAnimation("counter-up-3", 3);
   startCounterAnimation("counter-up-4", 1);
 });
+
+// Function to get the visitor count from local storage
+function getVisitorCount() {
+  return localStorage.getItem('visitorCount') || 0;
+}
+
+// Function to set the visitor count in local storage
+function setVisitorCount(count) {
+  localStorage.setItem('visitorCount', count);
+}
+
+// Update the visitor count on the page
+function updateVisitorCount() {
+  const countElement = document.getElementById('visitor-count');
+  if (countElement) { // Check if the element exists
+    const currentCount = parseInt(getVisitorCount(), 10) + 1;
+    countElement.textContent = currentCount;
+    setVisitorCount(currentCount);
+  }
+}
+
+// Call the updateVisitorCount function when the page loads
+window.addEventListener('load', updateVisitorCount);
