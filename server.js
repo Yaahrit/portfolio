@@ -21,8 +21,8 @@ let connection = mysql.createConnection({
   host: process.env.HOST,
   user: process.env.USER,
   password: process.env.PASSWORD,
-  database:process.env.DATABASE,
-  connectionLimit:10
+  database: process.env.DATABASE,
+  port: process.env.PORT
 });
 
 // Define a route to serve your index file
@@ -40,15 +40,18 @@ app.get("/pdf/:filename", (req, res) => {
 app.post("/contact", (req, res) => {
   let { name, email, project, message } = req.body;
   let id = uuidv4();
-  let q = `INSERT INTO contact (id, name, email, project,message) VALUES ('${id}','${name}','${email}','${project}','${message}') `;
+  let q = `INSERT INTO contact (id, name, email, project, message) VALUES (?, ?, ?, ?, ?)`;
+  let values = [id, name, email, project, message];
+  
   try {
-    connection.query(q, (err, result) => {
+    connection.query(q, values, (err, result) => {
       if (err) throw err;
       console.log("Sent message successfully");
       res.redirect("/");
     });
   } catch (err) {
-    res.send("some error occurred");
+    console.error(err);
+    res.send("Some error occurred");
   }
 });
 
@@ -56,4 +59,3 @@ app.post("/contact", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
