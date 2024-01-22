@@ -9,7 +9,6 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
 
 // Define the path to your static files (like HTML, CSS, and images)
 const publicPath = path.join(__dirname, "public");
@@ -26,7 +25,7 @@ let connection = mysql.createConnection({
 });
 
 // Define a route to serve your index file
-app.get("/", (req, res) => {
+app.all("/", (req, res) => {
   res.sendFile(path.join(publicPath, "index.html"));
 });
 
@@ -42,7 +41,7 @@ app.post("/contact", (req, res) => {
   let id = uuidv4();
   let q = `INSERT INTO contact (id, name, email, project, message) VALUES (?, ?, ?, ?, ?)`;
   let values = [id, name, email, project, message];
-  
+
   try {
     connection.query(q, values, (err, result) => {
       if (err) throw err;
