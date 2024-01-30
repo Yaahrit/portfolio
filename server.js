@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
@@ -8,7 +8,8 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); // Parse JSON requests
+app.use(bodyParser.urlencoded({ extended: true })); // Parse form submissions
 
 // Define the path to your static files (like HTML, CSS, and images)
 const publicPath = path.join(__dirname, "public");
@@ -25,7 +26,7 @@ let connection = mysql.createConnection({
 });
 
 // Define a route to serve your index file
-app.all("/", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(publicPath, "index.html"));
 });
 
