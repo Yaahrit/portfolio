@@ -41,24 +41,53 @@ document.addEventListener("DOMContentLoaded", function () {
     ' <a href="#" class="copyright-link">Yash Raj</a>. All Rights Reserved';
 });
 
+// function startCounterAnimation(targetId, endValue) {
+//   let current = 0;
+//   const target = document.getElementById(targetId);
+//   if (target) { // Check if the target element exists
+//     const intervalId = setInterval(() => {
+//       current++;
+//       target.textContent = current + "+";
+//       if (current === endValue) {
+//         clearInterval(intervalId);
+//       }
+//     }, 100);
+//   }
+// }
+
+// // Start counter animations when the page is loaded
+// document.addEventListener("DOMContentLoaded", () => {
+//   startCounterAnimation("counter-up-1", 0);
+//   startCounterAnimation("counter-up-2", 5);
+//   startCounterAnimation("counter-up-3", 0);
+//   startCounterAnimation("counter-up-4", 0);
+// });
+
+
 function startCounterAnimation(targetId, endValue) {
-  let current = 0;
   const target = document.getElementById(targetId);
-  if (target) { // Check if the target element exists
-    const intervalId = setInterval(() => {
-      current++;
-      target.textContent = current + "+";
-      if (current === endValue) {
-        clearInterval(intervalId);
-      }
-    }, 100);
+  if (!target) return;
+
+  if (endValue === 0) {
+    // If endValue is zero, just display 0+ and no animation
+    target.textContent = "0+";
+    return;
   }
+
+  let current = 0;
+  const intervalId = setInterval(() => {
+    current++;
+    target.textContent = current + "+";
+    if (current === endValue) {
+      clearInterval(intervalId);
+    }
+  }, 100);
 }
 
 // Start counter animations when the page is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  startCounterAnimation("counter-up-1", 1);
-  startCounterAnimation("counter-up-2", 10);
-  startCounterAnimation("counter-up-3", 3);
-  startCounterAnimation("counter-up-4", 1);
+  startCounterAnimation("counter-up-1", 0);
+  startCounterAnimation("counter-up-2", 5);
+  startCounterAnimation("counter-up-3", 0);
+  startCounterAnimation("counter-up-4", 0);
 });
