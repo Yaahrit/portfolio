@@ -2,243 +2,236 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root {
-    --springGreen: #fe424d;
-    --bg-0: #010718;
-    --color-0: #f5f5f5;
-    --bg-1: #121212;
-    --color-1: #a8a8a8;
-    --toggle-bg: #3498db;
-    /* Toggle background color */
-    --toggle-ball: #ffffff;
-    /* Toggle ball color */
+  --springGreen: #fe424d;
+  --bg-0: #010718;
+  --color-0: #f5f5f5;
+  --bg-1: #121212;
+  --color-1: #a8a8a8;
+  --toggle-bg: #3498db;
+  --toggle-ball: #ffffff;
 }
 
 * {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    text-transform: capitalize;
-    transition: all .2s linear;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
 }
 
 *::selection {
-    background: var(--springGreen);
-    color: #333;
+  background: var(--springGreen);
+  color: #333;
 }
 
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
+  font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
-    width: 1.4rem;
+  width: 1.4rem;
 }
 
 html::-webkit-scrollbar-track {
-    background: #222;
+  background: #222;
 }
 
 html::-webkit-scrollbar-thumb {
-    background: var(--springGreen);
+  background: var(--springGreen);
 }
 
 body {
-    background: #010718;
-    overflow-x: hidden;
-    padding-left: 35rem;
+  background: #010718;
+  overflow-x: hidden;
+  padding-left: 35rem;
 }
 
 section {
-    min-height: 100vh;
-    padding: 1rem;
+  min-height: 100vh;
+  padding: 1rem;
 }
 
 /* End Global CSS For Whole Page*/
 
 /* Start Button CSS*/
 .btn {
-    padding: .7rem 3rem;
-    background: #333;
-    color: #fff;
-    cursor: pointer;
-    margin-top: 1rem;
-    font-size: 2rem;
-    border-radius: 5rem;
+  padding: .7rem 3rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border-radius: 5rem;
 }
 
 .btn i {
-    padding: 0 .5rem;
-    font-size: 1.8rem;
+  padding: 0 .5rem;
+  font-size: 1.8rem;
 }
 
 .btn:hover {
-    background: var(--springGreen);
-    color: #1a1a1a
+  background: var(--springGreen);
+  color: #1a1a1a
 }
 
 #element {
-    color: chocolate;
-    font-size: 2rem;
-    font-weight: 500;
+  color: chocolate;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 /* End Button CSS*/
 
 /* Start header Navbar Section CSS*/
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    height: 100%;
-    width: 35rem;
-    background: #1a1a1a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 35rem;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
 }
 
 header .user img {
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: .7rem solid var(--springGreen);
-    margin-top: 15px;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: .7rem solid var(--springGreen);
+  margin-top: 15px;
 }
 
 header .user .name {
-    font-size: 3.5rem;
-    color: #fff;
+  font-size: 3.5rem;
+  color: #fff;
 }
 
 .nickname {
-    font-size: 2.5rem;
-    color: #fff;
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 header .user .post {
-    font-size: 2rem;
-    color: #eee;
+  font-size: 2rem;
+  color: #eee;
 }
 
 header .navbar {
-    width: 100%;
+  width: 100%;
 }
 
 header .navbar ul {
-    list-style: none;
-    padding: 1rem 3rem;
+  list-style: none;
+  padding: 1rem 3rem;
 }
 
 
 header .navbar ul li a {
-    display: block;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    background: #333;
-    color: #fff;
-    font-size: 2rem;
-    border-radius: 5rem;
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background: #333;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 5rem;
 }
 
 header .navbar ul li a:hover {
-    background: var(--springGreen);
-    color: #1a1a1a;
+  background: var(--springGreen);
+  color: #1a1a1a;
 }
 
 #menu {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    background: #333;
-    color: #fff;
-    cursor: pointer;
-    font-size: 2.5rem;
-    padding: 1rem 1.5rem;
-    z-index: 1000;
-    display: none;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+  display: none;
 }
 
 /* End header Navbar CSS*/
 
 /* Home Section CSS Start*/
 .home {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    padding: 4rem;
-    /* background: linear-gradient(to right, #3494e6, #ec6ead); Gradient background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Box shadow */
-    border-radius: 10px;
-    /* Optional: Add a border-radius for a rounded look */
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .home h3 {
-    font-size: 2.5rem;
-    color: #fff;
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 .home h1 {
-    font-size: 5rem;
-    color: #fff;
+  font-size: 5rem;
+  color: #fff;
 }
 
 .home h1 span {
-    color: var(--springGreen);
+  color: var(--springGreen);
 }
 
 .home p {
-    font-size: 2rem;
-    color: #eee;
-    padding: 1rem 0;
+  font-size: 2rem;
+  color: #eee;
+  padding: 1rem 0;
 }
 
 .btn {
-    background-color: var(--springGreen);
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    /* Add transition for smooth hover effect */
+  background-color: var(--springGreen);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #2ecc71;
-    /* Change to a shade of green */
+  background-color: #2ecc71;
 }
 
 .heading {
-    text-align: center;
-    margin: 0 2rem;
-    font-size: 4rem;
-    padding: 1rem;
-    border-bottom: 0.1rem solid #fff4;
-    color: #fff;
-    animation: fadeInDown 1.5s ease-in-out;
+  text-align: center;
+  margin: 0 2rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #fff4;
+  color: #fff;
+  animation: fadeInDown 1.5s ease-in-out;
 }
 
 @keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* End Home Section CSS*/
@@ -246,11 +239,13 @@ header .navbar ul li a:hover {
 /* Start About Section CSS */
 .about .row {
   display: flex;
-  align-items: flex-start; /* better alignment for text */
+  align-items: flex-start;
+  /* better alignment for text */
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2rem 0;
-  gap: 3rem; /* consistent spacing between columns */
+  gap: 3rem;
+  /* consistent spacing between columns */
   max-width: 1200px;
   margin: 0 auto;
   color: #ddd;
@@ -264,7 +259,7 @@ header .navbar ul li a:hover {
   background-color: #1e1e1e;
   border-radius: 1rem;
   color: #eee;
- box-shadow:
+  box-shadow:
     0 6px 18px rgba(0, 0, 0, 0.5),
     inset 0 0 8px rgba(255, 255, 255, 0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -335,7 +330,8 @@ header .navbar ul li a:hover {
   border-radius: 1rem;
   text-align: center;
   padding: 2.5rem 1.5rem;
-  margin: 0; /* use gap for spacing */
+  margin: 0;
+  /* use gap for spacing */
   box-shadow:
     4px 4px 15px rgba(0, 0, 0, 0.3),
     -4px -4px 15px rgba(255, 255, 255, 0.05);
@@ -377,6 +373,7 @@ header .navbar ul li a:hover {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -506,6 +503,7 @@ header .navbar ul li a:hover {
     width: 90%;
   }
 }
+
 /* End Education Section CSS */
 
 
@@ -567,7 +565,7 @@ header .navbar ul li a:hover {
   border-radius: 12px;
   padding: 20px 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   height: 160px;
   display: flex;
   flex-direction: column;
@@ -617,6 +615,7 @@ header .navbar ul li a:hover {
     font-size: 1.5rem;
   }
 }
+
 /* Skills section End here */
 
 /* Start Portfolio Section CSS */
@@ -694,7 +693,7 @@ header .navbar ul li a:hover {
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: 500;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: background 0.3s;
 }
 
@@ -850,7 +849,7 @@ header .navbar ul li a:hover {
 /* End Contact Section CSS */
 
 .hr {
-    border: 1px solid #eee;
+  border: 1px solid #eee;
 }
 
 /*-----------------------------------*\
@@ -952,6 +951,7 @@ header .navbar ul li a:hover {
 }
 
 @media (max-width: 600px) {
+
   .contactee-list,
   .footer-list {
     flex-direction: column;
@@ -964,12 +964,13 @@ header .navbar ul li a:hover {
     font-size: 0.9rem;
   }
 }
+
 .credit {
   text-align: center;
-  font-size: 14px;
-  background-color: #0f0f0f;
+  font-size: 13px;
   color: #bbb;
-  padding: 15px 0;
+  padding: 10px 0;
+  background-color: #0f0f0f;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   user-select: none;
 }
@@ -985,85 +986,62 @@ header .navbar ul li a:hover {
 }
 /* End Footer CSS */
 
-/* Add this in your existing CSS file or create a new one */
-
 /* Scroll For Top CSS */
 .top {
-    position: fixed;
-    bottom: 7.5rem;
-    right: 2rem;
-    z-index: 100;
-    display: none;
+  position: fixed;
+  bottom: 7.5rem;
+  right: 2rem;
+  z-index: 100;
+  display: none;
 }
-
-
-
 /* Responsive media queries  */
-
 @media (max-width:1200px) {
-
-    html {
-        font-size: 55%;
-    }
-
-    .home {
-        padding: 1rem 4rem;
-    }
-
+  html {
+    font-size: 55%;
+  }
+  .home {
+    padding: 1rem 4rem;
+  }
 }
 
 @media (max-width:991px) {
-
-    header {
-        left: -120%;
-    }
-
-    #menu {
-        display: block;
-    }
-
-    header.toggle {
-        left: 0%;
-    }
-
-    body {
-        padding: 0;
-    }
-
+  header {
+    left: -120%;
+  }
+  #menu {
+    display: block;
+  }
+  header.toggle {
+    left: 0%;
+  }
+  body {
+    padding: 0;
+  }
 }
 
 @media (max-width:768px) {
-
-    html {
-        font-size: 50%;
-    }
-
+  html {
+    font-size: 50%;
+  }
 }
 
 @media (max-width:400px) {
-
-    header {
-        width: 100vw;
-    }
-
-    .heading {
-        margin: 0 3rem;
-    }
-
-    .about .row .counter .box {
-        width: 100%;
-    }
-
-    .education .box-container .box {
-        width: 100%;
-    }
-
-    .portfolio .box-container .box {
-        width: 100%;
-    }
-
-    .contact .row form {
-        margin: 3rem 0;
-    }
-
+  header {
+    width: 100vw;
+  }
+  .heading {
+    margin: 0 3rem;
+  }
+  .about .row .counter .box {
+    width: 100%;
+  }
+  .education .box-container .box {
+    width: 100%;
+  }
+  .portfolio .box-container .box {
+    width: 100%;
+  }
+  .contact .row form {
+    margin: 3rem 0;
+  }
 }
